@@ -5,9 +5,10 @@ import { AppComponent } from './app.component';
 import { appRoutes } from './app.routes';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './common/navbar/navbar.component';
+import { ProductListComponent } from './product-list/product-list.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent],
+  declarations: [AppComponent, NavbarComponent, ProductListComponent],
   imports: [
     BrowserModule,
     NgbModule,
@@ -15,5 +16,6 @@ import { NavbarComponent } from './common/navbar/navbar.component';
   ],
   providers: [],
   bootstrap: [AppComponent],
+  exports: [ProductListComponent],
 })
 export class AppModule {}
