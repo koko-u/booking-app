@@ -6,9 +6,15 @@ import { appRoutes } from './app.routes';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './common/navbar/navbar.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, ProductListComponent],
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    ProductListComponent,
+    ProductDetailComponent,
+  ],
   imports: [
     BrowserModule,
     NgbModule,
