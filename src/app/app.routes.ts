@@ -1,3 +1,11 @@
 import { Route } from '@angular/router';
+import { ProductListComponent } from './product-list/product-list.component';
 
-export const appRoutes: Route[] = [];
+export const appRoutes: Route[] = [
+  {
+    path: '',
+    component: ProductListComponent,
+    pathMatch: 'full',
+    title: 'Products | Booking App',
+  },
+];
