@@ -1,22 +1,26 @@
 import { Route } from '@angular/router';
-import { ProductListComponent } from './product-list/product-list.component';
-import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ProductListComponent } from './products/product-list/product-list.component';
+import { ProductDetailComponent } from './products/product-detail/product-detail.component';
 
 export const appRoutes: Route[] = [
   {
     path: '',
-    component: ProductListComponent,
+    redirectTo: '/products',
     pathMatch: 'full',
-    title: 'Products | Booking App',
   },
   {
     path: 'products',
-    component: ProductListComponent,
-    title: 'Products | Booking App',
-  },
-  {
-    path: 'products/:id',
-    component: ProductDetailComponent,
-    title: 'Detail | Booking App',
+    children: [
+      {
+        path: '',
+        component: ProductListComponent,
+        title: 'Products | Booking App',
+      },
+      {
+        path: ':id',
+        component: ProductDetailComponent,
+        title: 'Detail | Booking App',
+      },
+    ],
   },
 ];
