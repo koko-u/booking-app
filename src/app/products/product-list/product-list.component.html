@@ -2,7 +2,7 @@
     <div class="row row-cols-auto mt-2">
         <ng-container *ngFor="let product of products">
             <div class="col-md-3">
-                <a [routerLink]="['/products', product.id]" class="text-decoration-none">
+                <a [routerLink]="[product.id]" class="text-decoration-none">
                     <div class="card">
                         <img [alt]="product.title" [src]="product.image"
                              class="card-img-top">
